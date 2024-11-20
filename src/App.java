@@ -1,6 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
 
+        // Criando objetos
         Celular celularA = new Celular();
         Celular celularB = new Celular();
 
@@ -19,7 +20,10 @@ public class App {
         System.out.println("O tamanho da tela é: " + celularA.tamanhoTela);
         System.out.println("Tem : " + celularA.espacoArmazenamento + "g de armazenamento");
 
-        System.out.format("O meu celular é um %s, o seu sistema é %s, tem %.1f de tela e %dg de armazenamento" , celularB.nome , celularB.sistemaOperacional , celularB.tamanhoTela , celularB.espacoArmazenamento);
+        System.out.format("O meu celular é um %s, o seu sistema é %s, tem %.1f de tela e %dg de armazenamento\n" , celularB.nome , celularB.sistemaOperacional , celularB.tamanhoTela , celularB.espacoArmazenamento);
+        
+        celularA.mostrarConfig();
 
+        celularA.downloadFile("web-google.txt", 5);
     }
 }
