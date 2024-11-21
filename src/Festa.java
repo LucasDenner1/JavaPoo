@@ -1,25 +1,42 @@
 public class Festa {
-    private int bebidas = 60;
-    private int comidas = 90;
+    private int bebidas;
+    private int comidas;
+    private String presente;
     private String codigoConvite = "a51@asd";
 
-    private void beberCafe(){
-        bebidas --;
-        System.out.println("voce bebeu 1 chícara, quantidade total de bebidas da festa: " + bebidas);
-    }
 
-    private void comerSalgado(){
-        comidas -= 5;
-        System.out.println("voce comeu 5 salgados, quantidade total de salgados na festa : " + comidas);
-    }
-
-    public void verificacaoConvite(String convite){
+    public void verificaConvite(String convite){
         if(codigoConvite == convite){
-            beberCafe();
-            comerSalgado();
-            beberCafe();
+            System.out.println("Convite verificado!");
+            System.out.format("Seu presente foi %s, trouxe %d bebida(s) e %d comida(s), obrigado!\n",presente,bebidas,comidas);
         }else{
-            System.err.println("Erro: código do convite errado! ");
+            System.out.println("Erro: Convite inválido!");
         }
     }
+
+
+    public String getPresente(){
+        return presente;
+    }
+
+    public void setPresente(String presente){
+        this.presente = presente;
+    }
+
+    public int getBebidas(){
+        return bebidas;
+    }
+
+    public void setBebidas(int bebidas){
+        this.bebidas = bebidas ;
+    }
+
+    public int getComidas(){
+        return comidas;
+    }
+
+    public void setComidas(int comidas){
+        this.comidas = comidas;
+    }
+
 }
