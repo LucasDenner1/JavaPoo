@@ -1,5 +1,3 @@
-import Jogos.Jogo;
-
 public class Console {
 
     private boolean botaoPower;
@@ -10,9 +8,8 @@ public class Console {
         this.botaoPower = true;
     }
     
-    public void escolhendoJogo(Jogo jogo){
+    public void escolhendoJogo(){
         if (botaoPower) {
-            jogo.jogar();
             this.temJogo = true;
         }
         else{
@@ -20,11 +17,11 @@ public class Console {
         }
     }
 
-    public void desligarConsole(Jogo jogo){
+    public void desligarConsole(){
 
         if (botaoPower ){
             if (temJogo) {
-                jogo.fecharJogo();
+                
             }
             System.out.println("Desligando..");
         }
