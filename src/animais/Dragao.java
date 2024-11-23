@@ -1,6 +1,6 @@
 package animais;
 
-public class Dragao extends Ave implements Caracteristicas{
+public class Dragao extends Ave{
     
     public Dragao(String nome){
         super(nome);
@@ -10,7 +10,8 @@ public class Dragao extends Ave implements Caracteristicas{
         System.out.printf("%s cospiu fogo",getNome());
     }
 
-    public void caracteristicas() {
-        System.out.printf("%s é um dragão\n",getNome());
+    public String toString() {
+        String info = String.format("%s cospe fogo",getNome());
+        return info;
     }
 }

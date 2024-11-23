@@ -7,13 +7,13 @@ public class App {
         Cachorro pincher = new Cachorro("Leona", "Caramelo");
         Dragao dragao = new Dragao("Ernesto");
 
-        pincher.caracteristicas();
+        System.out.println(pincher);
         pincher.comer();
         pincher.beber();
         pincher.lamber();
         pincher.latir();
 
-        dragao.caracteristicas();
+        System.out.println(dragao);
         dragao.comer();
         dragao.beber();
         dragao.voar();
